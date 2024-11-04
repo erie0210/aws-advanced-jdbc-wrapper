@@ -57,6 +57,7 @@ public class PgFailoverSample {
       setInitialSessionSettings(conn);
       // Begin business transaction
       conn.setAutoCommit(false);
+      conn.setReadOnly(true);
 
       // Example business transaction
       updateQueryWithFailoverHandling(conn,
